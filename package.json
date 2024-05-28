@@ -1,5 +1,5 @@
 {
-  "name": "projetoapp",
+  "name": "projetoapp_Backend",
   "version": "1.0.0",
   "description": "Projeto em Node",
   "main": "Server.js",
