@@ -42,6 +42,9 @@ No desenvolvimento do frontend do Task-a-Tudo, usamos o React, uma biblioteca Ja
 #Integração com o Frontend - 
 
 Garantimos que todas as respostas da API sejam rápidas e contenham as informações necessárias para que o frontend funcione de maneira eficiente e sem interrupções.
+ 
+
+
 
 ## Banco de Dados
 
@@ -67,10 +70,52 @@ Na gestão do nosso código, contamos com o GitHub para acompanhar as diferentes
 Isso significa que podemos colaborar em diferentes partes do projeto ao mesmo tempo, sem nos preocuparmos em sobrescrever o trabalho uns dos outros.
 
 - Para garantir que nosso software funcione corretamente, implementamos testes automatizados. Isso significa que podemos identificar e corrigir problemas rapidamente, o que é essencial para manter a qualidade do nosso código e a satisfação dos usuários.
-  
 ## Autores
 
 - [@Jullia Azevedo](https://github.com/JulliaAP)
 - [@Vitória Lorenna](https://github.com/Lor3nn)
 - [@Vinícius Regis](https://github.com/vrzim5)
 - [@Emilly Menezes](https://github.com/emmenezes02)
+  
+## Documentação da API
+
+#### Retorna todas as tarefas
+
+http
+  GET /
+
+
+| Parâmetro   | Tipo       | Descrição                           |
+| :---------- | :--------- | :---------------------------------- |
+| `` | `` |  |
+
+#### Salva uma tarefa
+
+http
+  POST /save
+
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| text      | string | *Obrigatório*. O título da tarefa que você quer |
+
+#### Atualiza uma tarefa
+
+http
+  POST /update
+
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| _id      | string | *Obrigatório*. O ID da tarefa que você quer |
+| text      | string | *Obrigatório*. O título da tarefa que você quer |
+
+#### Apaga uma tarefa
+
+http
+  POST /delete
+
+
+| Parâmetro   | Tipo       | Descrição                                   |
+| :---------- | :--------- | :------------------------------------------ |
+| _id      | string | *Obrigatório*. O ID da tarefa que você quer |
