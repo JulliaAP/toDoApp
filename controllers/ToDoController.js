@@ -6,20 +6,20 @@ getToDo = async (req, res) => {
 };
 
 saveToDo = async (req, res) => {
-  const { text,  createdAt } = req.body;
+  const { text, prazo } = req.body;
 
-  ToDoModel.create({ text, createdAt }).then((data) => {
-    console.log("A tarefa foi salva...");
+  ToDoModel.create({ text, prazo }).then((data) => {
+    console.log("Os dados foram salvos no database...");
     console.log(data);
     res.send(data);
   });
 };
 
 updateToDo = async (req, res) => {
-  const { _id, text } = req.body;
-  ToDoModel.findByIdAndUpdate(_id, { text })
+  const { _id, text, completo,} = req.body;
+  ToDoModel.findByIdAndUpdate(_id, { text, completo: true, },)
     .then(() => {
-      res.send("A tarefa foi atualizada...");
+      res.send("Os dados foram atualizados...");
     })
     .catch((err) => {
       console.log(err);
